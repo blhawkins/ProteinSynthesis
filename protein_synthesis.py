@@ -1,25 +1,31 @@
 #Author: Benjamin Hawkins
-#Date: 19 February 2021
+#Date: 1 March 2021
 
-#Objects: Ribosome, Amino Acid, mRNA, Template DNA strand, RNA Polymerase
+#----------Definition of classes----------
+class NucleicAcid:
+    NUCLEIC_ACID_TYPES  = ("Template DNA", "Coding DNA", "mRNA")
 
-#Program Structure
-#1. Accept user input for DNA strand (starting with ATG?)
-#2. Accept user input for template DNA strand
-#3. RNAPolymerase object converts the DNA strand into the cooresponding mRNA
+    def __init__(self, type, sequence):
+        if (not type in NucleicAcid.NUCLEIC_ACID_TYPES):
+            raise ValueError(f"{type} is not a valid type of nucleic acid. Please import a section of Template DNA, Coding DNA, or mRNA.")
+        else:
+            self.__type = type
+        self.__sequence = sequence
+    
+    def toMRNA(self):
+        if self.__type == "Template DNA":
+            pass
+        if self.__type == "Coding DNA":
+            pass
+        if self.__type == "mRNA":
+            pass
 
+#----------Implementation of Program----------
 
-class AminoAcid:
-    #def __init__(self)
-    #Attributes
-    #Name, abbreviation, polarity, codons for call
-    pass
+#Re
+nucleicAcidType = input("Is the entry a selection of [Template DNA], [Coding DNA], or [mRNA]? ")
+print(nucleicAcidType)
+entrySequence = input(f"Please enter the sequence of {nucleicAcidType}: ")
+print(entrySequence)
 
-class Ribosome:
-    pass
-
-class RNAPolymerase:
-    pass
-
-class TemplateDNA:
-    pass
+nucleicAcidInput = NucleicAcid(nucleicAcidType, entrySequence)
