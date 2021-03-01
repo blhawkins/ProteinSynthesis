@@ -1,2 +1,2 @@
-# protein_synthesis
-Object-Oriented Programming Project Simulating Protein Synthesis
+# ProteinSynthesis 🧫💪🏼
+Object-Oriented Program Simulating Protein Synthesis
